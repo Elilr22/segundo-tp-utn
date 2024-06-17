@@ -8,7 +8,14 @@ fetch("https://hp-api.onrender.com/api/characters")
     console.log(personajes);
 
     personajes.forEach((personaje) => {
-        $divPersonajes.innerHTML += `<h4>${personaje.name}</h4>`
+        $divPersonajes.innerHTML += `
+        <h4>${personaje.name}</h4>
+        <img src="${personaje.image}" alt="imagen de: ${personaje.name}">
+        <p>${personaje.actor}</p>
+        <p>${personaje.gender}</p>
+        <p>${personaje.house}</p>
+        <p>${personaje.dateOfBirth}</p>
+        `
     });
 })
 
